@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					4EDB28251D9A35B800A27E8E = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = W6C85598UH;
 						ProvisioningStyle = Automatic;
 					};
 					4EDB28391D9A35B900A27E8E = {
@@ -412,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = W6C85598UH;
 				INFOPLIST_FILE = breaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devm33.breaker;
@@ -424,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = W6C85598UH;
 				INFOPLIST_FILE = breaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devm33.breaker;
