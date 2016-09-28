@@ -14,12 +14,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         .map{$0 * 5}
         .map{String($0)}
 
+    // Outlets
     @IBOutlet weak var intervalPicker: UIPickerView!
+    @IBOutlet weak var timerLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.intervalPicker.dataSource = self
         self.intervalPicker.delegate = self
+        //default timer is 25min, TODO save users setting
+        self.intervalPicker.selectRow(5,inComponent: 0, animated: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,23 +32,22 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
 
     // UIPicker impl
-
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return intervals.count;
     }
-
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return intervals[row]
     }
 
     // Actions
-
-    @IBAction func startButton(_ sender: UIButton) {
-        sender.setTitle("Stop Working", for: UIControlState.normal)
+    @IBAction func toggleButton(_ sender: UIButton) {
+        sender.setTitle("TODO toggle logic", for: UIControlState.normal)
+    }
+    @IBAction func resetButton(_ sender: UIButton) {
+        sender.setTitle("TODO reset timer", for: UIControlState.normal)
     }
 }
 

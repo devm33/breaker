@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,29 +20,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FXv-OB-OxT">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="FXv-OB-OxT">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qif-vQ-pBd">
-                                        <state key="normal" title="Start Working"/>
-                                        <connections>
-                                            <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E3j-ZF-sUb"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uzc-Sj-ZPg">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qif-vQ-pBd">
+                                                <state key="normal" title="Stop">
+                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="toggleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="970-h9-lbS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znm-hO-Bhp">
+                                                <state key="normal" title="Reset"/>
+                                                <connections>
+                                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JWd-7G-hyy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eET-3U-cG0">
+                                        <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94W-1z-dG3"/>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="Qif-vQ-pBd" firstAttribute="centerX" secondItem="FXv-OB-OxT" secondAttribute="centerX" id="Iwe-G7-igd"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="FXv-OB-OxT" firstAttribute="firstBaseline" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="2xK-fY-vvX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FXv-OB-OxT" secondAttribute="bottom" id="Cny-RJ-f6A"/>
                             <constraint firstItem="FXv-OB-OxT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YnB-Ss-IaB"/>
                             <constraint firstItem="FXv-OB-OxT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ofr-7D-wM7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="intervalPicker" destination="94W-1z-dG3" id="lui-rX-pxc"/>
+                        <outlet property="timerLabel" destination="eET-3U-cG0" id="cI9-AL-Qeg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
