@@ -45,6 +45,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     // Actions
     @IBAction func toggleButton(_ sender: UIButton) {
         sender.setTitle("TODO toggle logic", for: UIControlState.normal)
+        sender.setTitleColor(self.view.tintColor, for: UIControlState.normal)
     }
     @IBAction func resetButton(_ sender: UIButton) {
         sender.setTitle("TODO reset timer", for: UIControlState.normal)
