@@ -18,19 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FXv-OB-OxT">
-                                <frame key="frameInset" minX="27" minY="211" width="320" height="246"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FXv-OB-OxT">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qif-vQ-pBd">
-                                        <frame key="frameInset" width="320" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qif-vQ-pBd">
                                         <state key="normal" title="Start Working"/>
                                         <connections>
                                             <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E3j-ZF-sUb"/>
                                         </connections>
                                     </button>
-                                    <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94W-1z-dG3">
-                                        <frame key="frameInset" minY="30" width="320" height="216"/>
-                                    </pickerView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94W-1z-dG3"/>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Qif-vQ-pBd" firstAttribute="centerX" secondItem="FXv-OB-OxT" secondAttribute="centerX" id="Iwe-G7-igd"/>
@@ -40,6 +36,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FXv-OB-OxT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YnB-Ss-IaB"/>
+                            <constraint firstItem="FXv-OB-OxT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ofr-7D-wM7"/>
                         </constraints>
                     </view>
                     <connections>
