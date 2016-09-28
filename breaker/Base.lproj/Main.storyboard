@@ -52,7 +52,6 @@
                             <constraint firstItem="y3c-jy-aDJ" firstAttribute="bottom" secondItem="FXv-OB-OxT" secondAttribute="top" id="2xK-fY-vvX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FXv-OB-OxT" secondAttribute="bottom" id="Cny-RJ-f6A"/>
                             <constraint firstItem="FXv-OB-OxT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YnB-Ss-IaB"/>
-                            <constraint firstItem="FXv-OB-OxT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ofr-7D-wM7"/>
                         </constraints>
                     </view>
                     <connections>
